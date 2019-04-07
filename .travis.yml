@@ -1,0 +1,9 @@
+language: python
+services:
+- docker
+before_install:
+- make build-latest
+- make build-test
+- make run-test
+script:
+- make tests
