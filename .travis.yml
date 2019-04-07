@@ -1,10 +1,13 @@
 language: python
+version:
+- "3.6"
 services:
 - docker
 before_install:
 - make build-latest
 - make build-test
 - make run-test
+- pip install -r tests/requirements.txt
 script:
 - make tests
 before_deploy:
